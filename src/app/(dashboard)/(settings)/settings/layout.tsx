@@ -6,7 +6,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <Box p="4">
       <Heading size="6" mb="4">
-        Settings layout
+        Workspace
       </Heading>
 
       <SettingsNav />

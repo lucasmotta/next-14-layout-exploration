@@ -10,7 +10,11 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         p="4"
         justify="start"
         rows="fit-content(100%)"
-        style={{ minHeight: '100dvh', backgroundColor: 'var(--gray-a2)' }}
+        style={{
+          minHeight: '100dvh',
+          backgroundColor: 'var(--gray-a2)',
+          borderRight: '1px solid var(--gray-a4)',
+        }}
       >
         <Heading size="1" mb="2">
           Top level
