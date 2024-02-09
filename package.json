@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "biome format --write src"
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --apply ./src",
+    "format": "biome check --apply ./src"
   },
   "dependencies": {
     "@radix-ui/themes": "3.0.0-rc.5",
