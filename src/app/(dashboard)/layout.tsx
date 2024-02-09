@@ -20,10 +20,10 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <Heading size="1" mb="2">
           Top level
         </Heading>
-        <NavLink href="/settings/team">
+        <NavLink href="/settings">
           <GearIcon /> Settings
         </NavLink>
-        <NavLink href="/settings/user">
+        <NavLink href="/user">
           <PersonIcon /> User Settings
         </NavLink>
         <NavLink href="/branding">

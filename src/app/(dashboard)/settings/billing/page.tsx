@@ -9,12 +9,12 @@ export default function SettingsBillingPage() {
       </Heading>
 
       <Flex direction="column" gap="2">
-        <Link asChild>
+        <Link asChild size="2">
           <NextLink href="/settings/billing/history">
             View billing history
           </NextLink>
         </Link>
-        <Link asChild>
+        <Link asChild size="2">
           <NextLink href="/settings/billing/edit-payment-method">
             Edit payment method
           </NextLink>

@@ -13,8 +13,15 @@ const dictionary: Record<string, string> = {
   'edit-payment-method': 'Edit payment method',
 }
 
-export function AutoBreadcrumbs(props: ComponentProps<typeof Flex>) {
-  const segments = useSelectedLayoutSegments()
+type AutoBreadcrumbsProps = {
+  baseSegments?: string[]
+} & ComponentProps<typeof Flex>
+
+export function AutoBreadcrumbs({
+  baseSegments = [],
+  ...props
+}: AutoBreadcrumbsProps) {
+  const segments = [...baseSegments, ...useSelectedLayoutSegments()]
 
   let acc = ''
 
