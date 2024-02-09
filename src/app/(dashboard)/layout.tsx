@@ -1,15 +1,16 @@
-import { Box, Button, Grid, Heading, Text } from '@radix-ui/themes'
-import { GearIcon } from '@radix-ui/react-icons'
+import { Box, Button, Flex, Grid, Heading, Text } from '@radix-ui/themes'
+import { GearIcon, PersonIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <Grid columns="240px 1fr">
-      <Grid
+      <Flex
+        gap="2"
+        direction="column"
         p="4"
         justify="start"
-        rows="fit-content(100%)"
         style={{
           minHeight: '100dvh',
           backgroundColor: 'var(--gray-a2)',
@@ -22,7 +23,10 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <NavLink href="/settings/team">
           <GearIcon /> Settings
         </NavLink>
-      </Grid>
+        <NavLink href="/settings/user">
+          <PersonIcon /> User Settings
+        </NavLink>
+      </Flex>
 
       <Box p="4">{children}</Box>
     </Grid>

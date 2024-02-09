@@ -8,7 +8,7 @@ export default function SettingsBillingPage() {
         Billing page
       </Heading>
 
-      <Flex gap="4">
+      <Flex direction="column" gap="2">
         <Link asChild>
           <NextLink href="/settings/billing/history">
             View billing history
