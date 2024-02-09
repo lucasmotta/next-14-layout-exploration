@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Grid, Heading, Text } from '@radix-ui/themes'
-import { GearIcon, PersonIcon } from '@radix-ui/react-icons'
+import { ColorWheelIcon, GearIcon, PersonIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -25,6 +25,9 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         </NavLink>
         <NavLink href="/settings/user">
           <PersonIcon /> User Settings
+        </NavLink>
+        <NavLink href="/branding">
+          <ColorWheelIcon /> Branding
         </NavLink>
       </Flex>
 
