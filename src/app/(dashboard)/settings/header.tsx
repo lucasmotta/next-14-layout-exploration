@@ -8,7 +8,7 @@ import {
 } from 'next/navigation'
 import { AutoBreadcrumbs } from '~/components/auto-breadcrumbs'
 
-export function SettingsHeader() {
+export function Header() {
   const segment = useSelectedLayoutSegment()
   const segments = useSelectedLayoutSegments()
 

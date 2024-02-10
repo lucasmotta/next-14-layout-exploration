@@ -29,6 +29,16 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <NavLink href="/branding">
           <ColorWheelIcon /> Branding
         </NavLink>
+
+        <Heading size="1" mb="2" mt="4">
+          Env level
+        </Heading>
+        <NavLink href="/env_12345">
+          <GearIcon /> Get started
+        </NavLink>
+        <NavLink href="/env_12345/organizations">
+          <GearIcon /> Organizations
+        </NavLink>
       </Flex>
 
       <Box p="4">{children}</Box>
