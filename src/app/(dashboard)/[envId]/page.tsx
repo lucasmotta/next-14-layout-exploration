@@ -6,7 +6,7 @@ interface Props {
 
 export default function GetStartedPage({ params }: Props) {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="column" gap="4" align="start">
       <Heading size="4">Get started page</Heading>
       <Text>Env: {params.envId}</Text>
     </Flex>

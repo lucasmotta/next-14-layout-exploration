@@ -23,22 +23,25 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === null}>
-          <NextLink href="/settings">Team</NextLink>
-        </TabNavLink>
-        <TabNavLink asChild active={segment === 'authentication'}>
-          <NextLink href="/settings/authentication">Authentication</NextLink>
-        </TabNavLink>
+        <NextLink passHref legacyBehavior href="/settings">
+          <TabNavLink active={segment === null}>Team</TabNavLink>
+        </NextLink>
+
+        <NextLink passHref legacyBehavior href="/settings/authentication">
+          <TabNavLink active={segment === 'authentication'}>
+            Authentication
+          </TabNavLink>
+        </NextLink>
 
         <NextLink passHref legacyBehavior href="/settings/billing">
           <TabNavLink active={segment === 'billing'}>Billing</TabNavLink>
         </NextLink>
 
-        <TabNavLink asChild active={segment === 'compliance-documents'}>
-          <NextLink href="/settings/compliance-documents">
+        <NextLink passHref legacyBehavior href="/settings/compliance-documents">
+          <TabNavLink active={segment === 'compliance-documents'}>
             Compliance Documents
-          </NextLink>
-        </TabNavLink>
+          </TabNavLink>
+        </NextLink>
       </TabNavRoot>
     </>
   )

@@ -7,7 +7,7 @@ interface Props {
 
 export default function OrgAuditLogsPage({ params }: Props) {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="column" gap="4" align="start">
       <Heading size="3">Audit logs page</Heading>
 
       <Link asChild size="2">

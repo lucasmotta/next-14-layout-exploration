@@ -24,21 +24,21 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === null}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.connectionId}`}
-          >
-            Connection
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.connectionId}`}
+        >
+          <TabNavLink active={segment === null}>Connection</TabNavLink>
+        </NextLink>
 
-        <TabNavLink asChild active={segment === 'sessions'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.connectionId}/sessions`}
-          >
-            Sessions
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.connectionId}/sessions`}
+        >
+          <TabNavLink active={segment === 'sessions'}>Sessions</TabNavLink>
+        </NextLink>
       </TabNavRoot>
     </>
   )

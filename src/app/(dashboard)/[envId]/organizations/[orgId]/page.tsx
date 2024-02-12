@@ -7,7 +7,7 @@ interface Props {
 
 export default function OrgFeaturesPage({ params }: Props) {
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="column" gap="4" align="start">
       <Heading size="3">Features page</Heading>
 
       <Link asChild size="2">

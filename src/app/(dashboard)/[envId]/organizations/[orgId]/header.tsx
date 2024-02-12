@@ -32,39 +32,43 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === null}>
-          <NextLink href={`/${params.envId}/organizations/${params.orgId}`}>
-            Features
-          </NextLink>
-        </TabNavLink>
-        <TabNavLink asChild active={segment === 'users'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/users`}
-          >
-            Users
-          </NextLink>
-        </TabNavLink>
-        <TabNavLink asChild active={segment === 'invitations'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/invitations`}
-          >
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}`}
+        >
+          <TabNavLink active={segment === null}>Features</TabNavLink>
+        </NextLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/users`}
+        >
+          <TabNavLink active={segment === 'users'}>Users</TabNavLink>
+        </NextLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/invitations`}
+        >
+          <TabNavLink active={segment === 'invitations'}>
             Invitations
-          </NextLink>
-        </TabNavLink>
-        <TabNavLink asChild active={segment === 'audit-logs'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/audit-logs`}
-          >
-            Audit logs
-          </NextLink>
-        </TabNavLink>
-        <TabNavLink asChild active={segment === 'settings'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/settings`}
-          >
-            Settings
-          </NextLink>
-        </TabNavLink>
+          </TabNavLink>
+        </NextLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/audit-logs`}
+        >
+          <TabNavLink active={segment === 'audit-logs'}>Audit logs</TabNavLink>
+        </NextLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/settings`}
+        >
+          <TabNavLink active={segment === 'settings'}>Settings</TabNavLink>
+        </NextLink>
       </TabNavRoot>
     </>
   )

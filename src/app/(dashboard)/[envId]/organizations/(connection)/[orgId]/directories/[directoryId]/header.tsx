@@ -19,37 +19,37 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === null}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}`}
-          >
-            Settings
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}`}
+        >
+          <TabNavLink active={segment === null}>Settings</TabNavLink>
+        </NextLink>
 
-        <TabNavLink asChild active={segment === 'events'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/events`}
-          >
-            Events
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/events`}
+        >
+          <TabNavLink active={segment === 'events'}>Events</TabNavLink>
+        </NextLink>
 
-        <TabNavLink asChild active={segment === 'users'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/users`}
-          >
-            Users
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/users`}
+        >
+          <TabNavLink active={segment === 'users'}>Users</TabNavLink>
+        </NextLink>
 
-        <TabNavLink asChild active={segment === 'groups'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/groups`}
-          >
-            Groups
-          </NextLink>
-        </TabNavLink>
+        <NextLink
+          passHref
+          legacyBehavior
+          href={`/${params.envId}/organizations/${params.orgId}/${params.directoryId}/groups`}
+        >
+          <TabNavLink active={segment === 'groups'}>Groups</TabNavLink>
+        </NextLink>
       </TabNavRoot>
     </>
   )
