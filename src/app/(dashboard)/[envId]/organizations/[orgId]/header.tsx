@@ -14,62 +14,65 @@ export function Header() {
   const segment = useSelectedLayoutSegment()
   const segments = useSelectedLayoutSegments()
 
-  if (segments.length > 1) {
-    return (
+  return (
+    <>
       <AutoBreadcrumbs
         baseSegments={['organizations', params.orgId]}
+        mb="4"
         customDictionary={{
           [params.orgId]: 'Foo corp',
         }}
       />
-    )
-  }
 
-  return (
-    <>
-      <Heading size="6" mb="4">
-        Foo corp
-      </Heading>
+      {segments.length <= 1 ? (
+        <>
+          <Heading size="6" mb="4">
+            Foo corp
+          </Heading>
 
-      <TabNavRoot>
-        <NextLink
-          passHref
-          legacyBehavior
-          href={`/${params.envId}/organizations/${params.orgId}`}
-        >
-          <TabNavLink active={segment === null}>Features</TabNavLink>
-        </NextLink>
-        <NextLink
-          passHref
-          legacyBehavior
-          href={`/${params.envId}/organizations/${params.orgId}/users`}
-        >
-          <TabNavLink active={segment === 'users'}>Users</TabNavLink>
-        </NextLink>
-        <NextLink
-          passHref
-          legacyBehavior
-          href={`/${params.envId}/organizations/${params.orgId}/invitations`}
-        >
-          <TabNavLink active={segment === 'invitations'}>
-            Invitations
-          </TabNavLink>
-        </NextLink>
-        <NextLink
-          passHref
-          legacyBehavior
-          href={`/${params.envId}/organizations/${params.orgId}/audit-logs`}
-        >
-          <TabNavLink active={segment === 'audit-logs'}>Audit logs</TabNavLink>
-        </NextLink>
-        <NextLink
-          passHref
-          legacyBehavior
-          href={`/${params.envId}/organizations/${params.orgId}/settings`}
-        >
-          <TabNavLink active={segment === 'settings'}>Settings</TabNavLink>
-        </NextLink>
-      </TabNavRoot>
+          <TabNavRoot>
+            <NextLink
+              passHref
+              legacyBehavior
+              href={`/${params.envId}/organizations/${params.orgId}`}
+            >
+              <TabNavLink active={segment === null}>Features</TabNavLink>
+            </NextLink>
+            <NextLink
+              passHref
+              legacyBehavior
+              href={`/${params.envId}/organizations/${params.orgId}/users`}
+            >
+              <TabNavLink active={segment === 'users'}>Users</TabNavLink>
+            </NextLink>
+            <NextLink
+              passHref
+              legacyBehavior
+              href={`/${params.envId}/organizations/${params.orgId}/invitations`}
+            >
+              <TabNavLink active={segment === 'invitations'}>
+                Invitations
+              </TabNavLink>
+            </NextLink>
+            <NextLink
+              passHref
+              legacyBehavior
+              href={`/${params.envId}/organizations/${params.orgId}/audit-logs`}
+            >
+              <TabNavLink active={segment === 'audit-logs'}>
+                Audit logs
+              </TabNavLink>
+            </NextLink>
+            <NextLink
+              passHref
+              legacyBehavior
+              href={`/${params.envId}/organizations/${params.orgId}/settings`}
+            >
+              <TabNavLink active={segment === 'settings'}>Settings</TabNavLink>
+            </NextLink>
+          </TabNavRoot>
+        </>
+      ) : null}
     </>
   )
 }
