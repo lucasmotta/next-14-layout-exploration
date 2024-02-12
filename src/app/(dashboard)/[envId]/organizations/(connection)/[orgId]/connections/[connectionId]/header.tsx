@@ -1,6 +1,6 @@
 'use client'
 
-import { TabNavRoot, TabNavLink, Heading } from '@radix-ui/themes'
+import { Heading, TabNavLink, TabNavRoot } from '@radix-ui/themes'
 import NextLink from 'next/link'
 import {
   useParams,

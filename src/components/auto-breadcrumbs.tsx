@@ -3,8 +3,8 @@
 import { Flex, Link, Text } from '@radix-ui/themes'
 import NextLink from 'next/link'
 import { useParams, useSelectedLayoutSegments } from 'next/navigation'
-import { ListFormat } from './list-format'
 import { ComponentProps } from 'react'
+import { ListFormat } from './list-format'
 
 const dictionary: Record<string, string> = {
   settings: 'Workspace settings',
