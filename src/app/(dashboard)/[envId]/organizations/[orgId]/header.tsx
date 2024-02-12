@@ -32,10 +32,8 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === 'features'}>
-          <NextLink
-            href={`/${params.envId}/organizations/${params.orgId}/features`}
-          >
+        <TabNavLink asChild active={segment === null}>
+          <NextLink href={`/${params.envId}/organizations/${params.orgId}`}>
             Features
           </NextLink>
         </TabNavLink>

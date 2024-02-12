@@ -23,8 +23,8 @@ export function Header() {
       </Heading>
 
       <TabNavRoot>
-        <TabNavLink asChild active={segment === 'team'}>
-          <NextLink href="/settings/team">Team</NextLink>
+        <TabNavLink asChild active={segment === null}>
+          <NextLink href="/settings">Team</NextLink>
         </TabNavLink>
         <TabNavLink asChild active={segment === 'authentication'}>
           <NextLink href="/settings/authentication">Authentication</NextLink>

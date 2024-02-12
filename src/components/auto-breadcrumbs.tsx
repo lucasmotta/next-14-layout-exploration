@@ -17,17 +17,22 @@ const dictionary: Record<string, string> = {
 }
 
 type AutoBreadcrumbsProps = {
+  customSegments?: string[]
   baseSegments?: string[]
   customDictionary?: Record<string, string>
 } & ComponentProps<typeof Flex>
 
 export function AutoBreadcrumbs({
   baseSegments = [],
+  customSegments,
   customDictionary = {},
   ...props
 }: AutoBreadcrumbsProps) {
   const params = useParams<{ envId?: string }>()
-  const segments = [...baseSegments, ...useSelectedLayoutSegments()]
+  const segments = customSegments || [
+    ...baseSegments,
+    ...useSelectedLayoutSegments(),
+  ]
 
   let acc = params.envId ? `/${params.envId}` : ''
 
